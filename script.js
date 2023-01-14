@@ -23,8 +23,8 @@ function getLocation() {
       const Data = await response.json();
       console.log(Data);
 
-      document.getElementById("latitude").innerHTML += `${latitude}`;
-      document.getElementById("longitude").innerHTML += `${longitude}`;
+      document.getElementById("latitude").innerHTML += `${Data.coord.lat}`;
+      document.getElementById("longitude").innerHTML += `${Data.coord.lon}`;
 
       document.getElementById("location").innerHTML += `${Data.name}`;
       document.getElementById("lat").innerHTML += `${Data.coord.lat}`;
